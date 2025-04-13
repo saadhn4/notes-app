@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const NotesDetails = () => {
   const { id } = useParams();
   const { data, isLoading } = useFetch(
-    `http://localhost:5009/api/notes/get/${id}`
+    `/api/notes/get/${id}`
   );
 
   const navigate = useNavigate();

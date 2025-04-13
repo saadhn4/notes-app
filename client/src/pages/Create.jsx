@@ -15,7 +15,7 @@ const Create = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      await axios.post("http://localhost:5009/api/notes/add", note);
+      await axios.post("/api/notes/add", note);
       alert("Note posted");
       navigate("/");
     } catch (error) {

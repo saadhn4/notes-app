@@ -3,7 +3,7 @@ import useFetch from "../useFetch";
 
 const Home = () => {
   const { data: notes, isLoading } = useFetch(
-    "http://localhost:5009/api/notes/getall"
+    "/api/notes/getall"
   );
 
   return (
