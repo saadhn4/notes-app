@@ -13,7 +13,7 @@ const NotesDetails = () => {
   const navigate = useNavigate();
 
   const handleDelete = async () => {
-    await axios.delete(`http://localhost:5009/api/notes/delete/${id}`);
+    await axios.delete(`/api/notes/delete/${id}`);
     alert("Note deleted!!");
     navigate("/");
   };
