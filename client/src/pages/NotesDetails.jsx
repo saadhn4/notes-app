@@ -13,9 +13,14 @@ const NotesDetails = () => {
   const navigate = useNavigate();
 
   const handleDelete = async () => {
-    await axios.delete(`/api/notes/delete/${id}`);
-    alert("Note deleted!!");
-    navigate("/");
+    try {
+      await axios.delete(`/api/notes/delete/${id}`);
+      alert("Note deleted!!");
+      navigate("/");
+    } catch (error) {
+      console.error("Delete failed:", error);
+      alert("Failed to delete note");
+    }
   };
 
   return (

@@ -31,6 +31,6 @@ app.get(/^\/(?!.*https?:\/\/).*$/, (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running at ${PORT}`);
 });
